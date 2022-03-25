@@ -52,13 +52,6 @@ class _SplashScreenState extends State<SplashScreen> {
                     width: 300.0,
                   ),
                 ),
-                Text("A whole grocery store\n at your fingertips",textAlign:TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18.0,
-                  ),
-                ),
               ],
             ),
 

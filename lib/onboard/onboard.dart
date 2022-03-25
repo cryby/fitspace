@@ -63,9 +63,9 @@ class _OnBoardState extends State<OnBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: currentIndex % 2 == 0 ? kwhite : kblue,
+      backgroundColor: kwhite,
       appBar: AppBar(
-        backgroundColor: currentIndex % 2 == 0 ? kwhite : kblue,
+        backgroundColor: kwhite,
         elevation: 0.0,
         actions: [
           TextButton(
@@ -77,7 +77,7 @@ class _OnBoardState extends State<OnBoard> {
             child: Text(
               "Skip",
               style: TextStyle(
-                color: currentIndex % 2 == 0 ? kblack : kwhite,
+                color: kblack,
               ),
             ),
           )
@@ -117,8 +117,8 @@ class _OnBoardState extends State<OnBoard> {
                                 height: 8,
                                 decoration: BoxDecoration(
                                   color: currentIndex == index
-                                      ? kbrown
-                                      : kbrown300,
+                                      ? Colors.orangeAccent
+                                      : Colors.orangeAccent.withOpacity(0.3),
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                               ),
@@ -133,7 +133,7 @@ class _OnBoardState extends State<OnBoard> {
                       fontSize: 27.0,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Poppins',
-                      color: index % 2 == 0 ? kblack : kwhite,
+                      color: kblack,
                     ),
                   ),
                   Text(
@@ -142,7 +142,7 @@ class _OnBoardState extends State<OnBoard> {
                     style: TextStyle(
                       fontSize: 14.0,
                       fontFamily: 'Montserrat',
-                      color: index % 2 == 0 ? kblack : kwhite,
+                      color: kblack,
                     ),
                   ),
                   InkWell(
@@ -155,29 +155,29 @@ class _OnBoardState extends State<OnBoard> {
                       }
 
                       _pageController.nextPage(
-                        duration: Duration(milliseconds: 300),
-                        curve: Curves.easeInExpo
+                        duration: Duration(milliseconds: 500),
+                        curve: Curves.easeIn
                       );
                     },
                     child: Container(
                       padding:
                           EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
                       decoration: BoxDecoration(
-                          color: index % 2 == 0 ? kblue : kwhite,
+                          color: Colors.orangeAccent.withOpacity(0.7),
                           borderRadius: BorderRadius.circular(15.0)),
                       child: Row(mainAxisSize: MainAxisSize.min, children: [
                         Text(
                           "Next",
                           style: TextStyle(
                               fontSize: 16.0,
-                              color: index % 2 == 0 ? kwhite : kblue),
+                              color: kwhite),
                         ),
                         SizedBox(
                           width: 15.0,
                         ),
                         Icon(
                           Icons.arrow_forward_sharp,
-                          color: index % 2 == 0 ? kwhite : kblue,
+                          color: kwhite,
                         )
                       ]),
                     ),
